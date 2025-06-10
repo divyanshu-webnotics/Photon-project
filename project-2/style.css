@@ -1,0 +1,294 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+
+
+body{
+    background-color: rgb(42, 42, 42);
+    /* padding: 10px 20px; */
+    
+}
+
+.header{
+    width: 100%;
+    /* max-width: 1200px; */
+    padding: 20px 30px;
+    background-color:aquamarine;
+    margin: auto;
+    /* border-radius: 8px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+.logo-container{
+    width: 10%;
+}
+
+/* .logo{
+    width: 10%;
+   
+} */
+
+svg{
+    fill: red;
+}
+
+.nav-links-container{
+    list-style-type: none;
+    display: flex;
+    column-gap: 25px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    
+}
+
+.nav-links{
+    padding: 5px 15px;
+    border: 1px solid white;
+    border-radius: 4px;
+    background-color: rgba(164, 51, 51, 0.2);
+    transition: background-color 0.25s;
+}
+
+.nav-links:hover{
+    background-color: transparent;
+    cursor: pointer;
+   
+   
+}
+
+nav{
+    display: inline-block;
+}
+
+.services::after {
+  font-family: "Font Awesome 6 Free"; /* or Brands, depending on icon */
+  content: "\f106"; /* Unicode for angle-up icon (rotated via class) */
+  font-weight: 900; /* Required for solid icons */
+  color: white;
+  transform: rotate(180deg);
+  display: inline-block;
+  margin-left: 5px;
+  /* font-size: 40px; */
+}
+
+/* .services:hover{
+    .services::after{
+        transform: rotate(90deg);
+    }
+} */
+
+.services:hover::after{
+    transform: rotate(90deg);
+}
+
+.services{
+    position: relative;
+    transition: all 4s;
+}
+
+.services:hover .overlay{
+    display: block;
+}
+
+.overlay{
+    position: absolute;
+    display: none;
+    left:0;
+    right:0;
+    top: 50px;
+    padding: 10px;
+    background-color: white;
+    z-index: 99999;
+}
+
+.overlay::before{
+    position: absolute;
+    content:"";
+    width:0;
+    height:0;
+    border-bottom: 12px solid white;
+    border-top: 12px solid transparent;
+    border-left:12px solid transparent;
+    border-right:12px solid transparent;
+    top:-22px;
+    left:50%;
+    transform: translateX(-50%);
+    z-index:99999;
+    
+}
+
+.overlay-links{
+    list-style-type: none;
+    transition: text-decoration 4s;
+    
+}
+
+.overlay-links:hover{
+    text-decoration: underline  ;
+}
+
+.overlay-links-container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.hamburger{
+    display: none;
+}
+
+.fa-bars{
+    font-size: 35px;
+}
+
+.home-page{
+    width: 100%;
+    height: 120vh;
+    background-image: 
+
+        /* linear-gradient(45deg, 
+            rgba(255,255,255,0.2) 0%,
+            rgba(255,255,255,0.2) 10%,
+            rgba(129, 127, 127, 0.2) 10%,
+            rgba(129,127,0127,0.2) 26%,
+            rgba(255,255,255,0.1) 26%,
+            rgba(255,255,255,0.1) 42%,
+            rgba(0,0,0,0.1) 42%,
+            rgba(0,0,0,0.1) 58%,
+            rgba(194, 193, 193, 0.2) 58%,
+            rgba(194,193,193,0.2) 74%,
+            rgba(151,151,149,0.3) 74%,
+            rgba(151, 151, 149,0.3) 90%,
+            rgba(255,255,255,0.1) 90%,
+            rgba(255,255,255,0.1) 100%
+           
+    ), */
+
+
+
+        url("./assets/images/overlay2.png"),
+
+        url("./assets/images/overlay3.svg"),
+
+        linear-gradient(45deg,rgb(79, 164, 154), rgb(67, 97, 194));
+
+     
+            /* background-attachment: fixed; */
+            background-position: center;
+            /* background-repeat: no-repeat; */
+            background-size: cover;
+
+}
+
+
+@media only screen and (max-width: 1024px){
+    .header{
+        flex-direction: column;
+        row-gap: 15px;
+    }
+
+    .nav-links-container{
+        column-gap: 40px;
+    }
+
+    .logo-container{
+        width: 15%;
+    }
+
+    a{
+        font-size: 2vw;
+    }
+
+    .nav-links{
+        vertical-align: center;
+    }
+
+    .services::after{
+        font-size: 2vw;
+        vertical-align: center;
+    }
+
+    .services{
+        vertical-align: center;
+    }
+}
+
+
+@media only screen and (max-width: 460px){
+
+    /* body{
+        padding: 5px 10px;
+    } */
+
+    .header{
+        flex-direction: column;
+        width: 100%;
+        border-radius: none;
+        padding: 10px;
+    }
+
+
+
+    .hamburger{
+        display: inline-block;
+    }
+
+    .logo-container{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+
+    .logo{
+        width: 25%;
+    }
+
+    .icon{
+        font-size: 27px;
+    }
+
+    .navigation{
+        margin-top: 50px;
+        width: 100%;
+        display: none;
+    }
+
+    .navigation.open{
+        margin-top: 50px;
+        margin-bottom: 20px;
+        width: 100%;
+        display: block;
+    }
+
+    .nav-links-container{
+        flex-direction: column;
+        width: 100%;
+        row-gap: 8px;
+    }
+
+    .nav-links{
+        /* display: block; */
+        width: 100%;
+        
+        
+    }
+
+    a{
+        vertical-align: center;
+    }
+}

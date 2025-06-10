@@ -1,0 +1,19 @@
+.services::after {
+  font-family: "Font Awesome 6 Free"; /* or Brands, depending on icon */
+  content: "\f106"; /* Unicode for angle-up icon (rotated via class) */
+  font-weight: 900; /* Required for solid icons */
+  color: white;
+  transform: rotate(180deg);
+  display: inline-block;
+  margin-left: 5px;
+}
+
+/* .services:hover{
+    .services::after{
+        transform: rotate(90deg);
+    }
+} */
+
+.services:hover::after{
+    transform: rotate(90deg);
+}

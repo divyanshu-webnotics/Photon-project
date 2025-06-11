@@ -49,11 +49,16 @@ a{
     text-decoration: none;
     color: white;
     font-size: 18px;
-    
+
+}
+
+.list{
+    padding: 10px 20px;
+    display: block;
 }
 
 .nav-links{
-    padding: 5px 15px;
+    
     border: 1px solid white;
     border-radius: 4px;
     background-color: rgba(164, 51, 51, 0.2);
@@ -71,7 +76,11 @@ nav{
     display: inline-block;
 }
 
-.services::after {
+.services:hover .fa-angle-up{
+    transform: rotate(90deg);
+}
+
+/* .services::after {
   font-family: "Font Awesome 6 Free"; /* or Brands, depending on icon */
   content: "\f106"; /* Unicode for angle-up icon (rotated via class) */
   font-weight: 900; /* Required for solid icons */
@@ -80,7 +89,7 @@ nav{
   display: inline-block;
   margin-left: 5px;
   /* font-size: 40px; */
-}
+} */
 
 /* .services:hover{
     .services::after{
@@ -94,7 +103,7 @@ nav{
 
 .services{
     position: relative;
-    transition: all 4s;
+    transition: transform 4s;
 }
 
 .services:hover .overlay{
@@ -186,12 +195,16 @@ nav{
         linear-gradient(45deg,rgb(79, 164, 154), rgb(67, 97, 194));
 
      
-            /* background-attachment: fixed; */
+            background-attachment: fixed;
             background-position: center;
             /* background-repeat: no-repeat; */
             background-size: cover;
 
+    
+    text-align: center;
 }
+
+
 
 
 @media only screen and (max-width: 1024px){
@@ -202,10 +215,11 @@ nav{
 
     .nav-links-container{
         column-gap: 40px;
+        margin-top: 10px;
     }
 
     .logo-container{
-        width: 15%;
+        width: 18%;
     }
 
     a{
@@ -214,6 +228,8 @@ nav{
 
     .nav-links{
         vertical-align: center;
+        nav-links: 7px 15px;
+        
     }
 
     .services::after{
@@ -290,5 +306,9 @@ nav{
 
     a{
         vertical-align: center;
+    }
+
+    .home-page{
+        background-attachment: scroll;
     }
 }

@@ -17,3 +17,6 @@
 .services:hover::after{
     transform: rotate(90deg);
 }
+
+
+:::: always give padding to inner-most element, like in nav-links, i removed padding from them and gave it to their child anchor element so that anchor is centred inside the nav-links as now it will just wrap the anchor.

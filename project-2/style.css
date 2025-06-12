@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+button{
+    font-family: 'Source Sans Pro', Helvetica, sans-serif;
+}
+
 
 
 body{
@@ -95,6 +99,7 @@ nav{
 .services{
     position: relative;
     transition: transform 4s;
+
 }
 
 .services:hover .overlay{
@@ -110,6 +115,7 @@ nav{
     padding: 10px;
     background-color: white;
     z-index: 99999;
+    margin-top: 10px;
 }
 
 .overlay::before{
@@ -125,6 +131,7 @@ nav{
     left:50%;
     transform: translateX(-50%);
     z-index:99999;
+    
     
 }
 
@@ -450,7 +457,7 @@ nav{
 
 .section-4{
     width: 100%;
-    height: 130vh;
+  
     padding: 100px 0;
 }
 
@@ -537,13 +544,159 @@ nav{
 
 .section-5{
     width: 100%;
-    height: 60vh;
+    
     background-image: 
         url("./assets/images/overlay1-sec-3.png"),
         url("./assets/images/section-3.jpg");
 
     background-attachment: fixed;
-    background-size: cover;    
+    background-size: cover;  
+    
+    padding-top: 110px;
+    padding-bottom: 110px;
+}
+
+
+.sec-5-header{
+    text-align: center;
+    color: white;
+}
+
+
+.sec-5-header-p1{
+    font-size: 37.33px;
+    font-weight: 300;
+    position: relative;
+    padding-bottom: 28px;
+    display: inline-block;
+    margin-bottom: 18.66px;
+    
+}
+
+.sec-5-header-p1::after{
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 30%;
+    background-color: #fff;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.sec-5-header-p2{
+    font-size: 19px;
+    font-weight: 300;
+    margin-bottom: 37.33px;
+    
+}
+
+.sec-5-flex-container{
+    display:flex;
+    justify-content:center;
+    column-gap: 20px;
+}
+
+.sign-up-btn{
+
+    width: 190px;
+    height: 45px;
+    border-radius: 6px;
+    font-size: 17px;
+    font-weight: 400;
+    color: #333333;
+    border: 1px solid white;
+    transition: all 0.25s;
+    letter-spacing: 2px;
+}
+
+.sign-up-btn:hover{
+    color: white;
+    background-color: rgba(255,255,255,0.1);
+    cursor: pointer;
+}
+
+.learn-btn{
+
+    width: 190px;
+    height: 45px;
+    border-radius: 6px;
+    font-size: 17px;
+    font-weight: 400;
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+    transition: all 0.25s;
+    letter-spacing: 2px;
+}
+
+
+.learn-btn:hover{
+    background-color: rgba(255,255,255,0.1);
+    cursor: pointer;
+}
+
+footer{
+    background:url("./assets/images/overlay2.png"),
+
+            url("./assets/images/overlay3.svg"),
+
+            linear-gradient(45deg, rgb(67, 97, 194),rgb(79, 164, 154));
+
+        
+                background-attachment: fixed;
+                background-position: center;
+                /* background-repeat: no-repeat; */
+                background-size: cover;
+
+    
+    width: 100%; 
+    padding: 100px 0px;          
+}
+
+
+.footer-content{
+    text-align: center;
+}
+
+.list-1{
+    display: flex;
+    list-style-type: none;
+    margin: auto;
+    justify-content: center;
+    column-gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-icon{
+    font-size: 27px;
+}
+
+.list-2{
+    display: flex;
+    justify-content: center;
+}
+
+.footer-link{
+    color: rgba(255,255,255,0.7);
+    padding: 0px 15px;
+}
+
+.border-link{
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
+
+.footer-span{
+    border-bottom: 1px dotted rgba(255,255,255,0.7);
+    transition: all 0.25s;
+}
+
+.footer-span:hover{
+    color:rgba(255,255,255,1);
+    border-bottom: 1px dotted rgba(255,255,255,1);
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 1024px){
@@ -837,4 +990,43 @@ nav{
     .section-4-container{
         width: 90%;
     }
+
+    .section-5{
+        padding: 50px 0px;
+    }
+
+    .sec-5-header{
+        width: 90%;
+        margin: auto;
+    }
+
+    .sec-5-header-p1{
+        font-size: 24px;
+    }
+
+    .sec-5-header-p2{
+        font-size: 16px;
+    }
+
+    .sec-5-flex-container{
+        flex-direction: column;
+        row-gap: 20px;
+        width: 90%;
+        margin: auto;
+    }
+
+    .sign-up-btn{
+        width: 100%;
+    }
+
+    .learn-btn{
+        width: 100%;
+    }
+
+    .list-2{
+        flex-direction: column;
+        row-gap: 10px;
+        margin-bottom: 20px;
+    }
+
 }
